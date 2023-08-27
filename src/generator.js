@@ -22,8 +22,10 @@ export default class Team {
   }
 
   * [Symbol.iterator]() {
+    const members = [];
     for (let i = 0; i < this.size; i += 1) {
-      yield Team.fill();
+      members.push(Team.fill());
+      yield members [i];
     }
     return { value: undefined };
   }
